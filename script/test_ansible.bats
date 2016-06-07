@@ -19,7 +19,3 @@ load options
   [[ ${output} =~ go1.6\. ]]
 }
 
-@test "autostager: latest version is installed" {
- run docker run --volumes-from playbooks-data -t -i --entrypoint bash autostager -c "pip list | grep autostager"
-  [[ ${output} =~ autostager ]]
-}
